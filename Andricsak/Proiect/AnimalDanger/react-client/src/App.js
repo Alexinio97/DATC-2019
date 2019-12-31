@@ -1,4 +1,3 @@
-import {Login} from './components/Login';
 import React, {Component} from 'react';
 import { Layout } from './components/Layout';
 import { Home } from './components/Home';
@@ -7,8 +6,6 @@ import { ViewAnimals } from './components/ViewAnimals';
 import { Route,Redirect } from 'react-router';
 import { GoogleLogin,GoogleLogout } from 'react-google-login';
 import PrivateRoute from './components/PrivateRoute';
-import nature from './components/nature.jpeg';
-
 
 
 export default class App extends React.Component {
@@ -39,7 +36,7 @@ export default class App extends React.Component {
               <PrivateRoute isLogged={this.state.isLoggedIn} component={Home} path="/Home" exact/>
               <PrivateRoute isLogged={this.state.isLoggedIn} component={AddAnimal} path="/AddAnimal" exact/>
               <PrivateRoute isLogged={this.state.isLoggedIn} component={ViewAnimals} path="/ViewAnimals" exact  />
-              <GoogleLogout
+              <GoogleLogout 
           clientId="707554693086-onkdae6efl5saje0jj6n1h089n0j4ger.apps.googleusercontent.com"
           buttonText="LOGOUT"
           onLogoutSuccess={logout}

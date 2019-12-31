@@ -117,7 +117,7 @@ export class AddAnimal extends React.Component {
                 </Input>
               </FormGroup>
             </Col>
-            <Button>Submit</Button>
+            <Button style={{marginBottom:'25px'}}>Submit</Button>
           </Form>
         </Container>
         );
